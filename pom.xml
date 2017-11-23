@@ -63,7 +63,25 @@
             </plugins>
         </pluginManagement>
     </build>
-
+         <distributionManagement>
+                 <repository>
+                     <id>deployment</id>
+                     <name>Internal Releases</name>
+                     <url>http://10.128.0.10:8081/repository/student-rel/</url>
+                 </repository>
+                 <snapshotRepository>
+                     <id>deployment</id>
+                     <name>Internal Snapshot Releases</name>
+                     <url>http://10.128.0.10:8081/repository/student-snap/</url>
+                 </snapshotRepository>
+             </distributionManagement>
+           <dependencies>
+                  <dependency>
+                           <groupId>javax.servlet</groupId>
+                           <artifactId>javax.servlet-api</artifactId>
+                           <version>3.0.1</version>
+                  </dependency>
+           </dependencies>
     <reporting>
         <plugins>
             <plugin>
